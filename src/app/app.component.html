@@ -8,14 +8,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <div class="container text-center">
     <br><br>
-    <form class="" >
+    <form class=""
+    #userForm = "ngForm"
+    (ngSubmit) = "onSubmit(userForm.value)">
       <div class="well well-sm">
         <h3 class="text text-success"><b>Login Form</b></h3>
-        <input type="text" name="firstname" placeholder="First Name" value="">
+        <input type="text" name="firstname" placeholder="First Name" value="" ngModel >
         <br>
-        <input type="text" name="lastname" placeholder="Last Name" value="">
+        <input type="text" name="lastname" placeholder="Last Name" value="" ngModel>
         <br>
-        <select class="" style=" " name="languages">
+        <select class="" style=" " name="languages" ngModel>
           <option value="C++">C++</option>
           <option value="Java">Java</option>
           <option value="Angular">Angular</option>
